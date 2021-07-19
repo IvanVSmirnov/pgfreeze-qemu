@@ -1,10 +1,22 @@
-pgfreeze-qemu - tool to create consistent point-in-time backup for Postgres database in QEMU/KVM environment.
+Tool to create consistent point-in-time backup for Postgres database in VM environment.
 ********************************************************************************
 
 Package description
 ================================================================================
-Shell script to freeze postgres in kvm environment. This script allows to get consistent database point-in-time backup using VM snapshot.
+This script allows to get consistent database point-in-time backup using Qemu/KVM snapshot.
+
+
+Requirements
+--------------------------------------------------------------------------
+pgfreeze-qemu requires:
+
+* qemu-guest-agent installed in VM with Postgre RDBMS
 
 
 
 
+How to install
+================================================================================
+
+# Copy script pgfreeze-qemu.sh to qemu guest agent fsfreeze-hook directory. By default, it should be /etc/qemu/fsfreeze-hook/. See 'man qemu-ga'
+# Enable fsfreeze-hook. Qemu guest agent should be running with option "-F"
