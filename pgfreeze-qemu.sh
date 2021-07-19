@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # Default values
 PGUSER="postgres"
 LABEL="pgfreeze"

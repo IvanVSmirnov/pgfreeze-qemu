@@ -1,4 +1,4 @@
-Postgres consistent point-in-time snap for KVM.
+Postgres consistent point-in-time snapshot for KVM
 *******************************************************************************************
 
 Package description
@@ -10,9 +10,7 @@ Requirements
 -------------------------------------------------------------------------------------------
 pgfreeze-qemu requires:
 
-* qemu-guest-agent installed in VM with Postgre RDBMS
-
-
+* qemu-guest-agent in VM with Postgres RDBMS
 
 
 How to install
