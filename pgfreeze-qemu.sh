@@ -1,4 +1,5 @@
 #!/bin/sh
+SELFNAME="pgfreeze-qemu"
 
 # Default values
 PGUSER="postgres"
@@ -16,12 +17,12 @@ freeze)
 	fi
 	
 	su -c "echo \"$SQL\" | psql" - ${PGUSER}
-	logger "Postgres has been freezed for backup"
+	logger --tag ${SELFNAME}  "Postgres RDBMS has been freezed for backup"
 	;;
 thaw)
 	SQL="SELECT * FROM pg_stop_backup();"
 	su -c "echo \"$SQL\" | psql" - ${PGUSER}
-	logger "Postgress has been unfrezed"
+	logger --tag ${SELFNAME} "Postgress has been unfrezed"
         ;;
 *)
 	echo "Usage: ./pgfreeze.sh (freeze|thaw)"
