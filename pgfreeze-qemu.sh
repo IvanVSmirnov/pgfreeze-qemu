@@ -3,10 +3,11 @@ SELFNAME="pgfreeze-qemu"
 
 # Default values
 PGUSER="postgres"
-LABEL="pgfreeze"
-STARTASAP=1
+LABEL="pgfreeze-qemu"
+IMMEDIATE=0
 
-[ -r /etc/default/pgfreeze ] && . /etc/default/pgfreeze
+# Override default values by user customized parameters
+[ -r /etc/default/pgfreeze-qemu ] && . /etc/default/pgfreeze-qemu
 
 case "$1" in
 freeze)
