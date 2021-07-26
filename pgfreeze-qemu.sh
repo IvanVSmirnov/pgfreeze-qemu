@@ -11,7 +11,7 @@ IMMEDIATE=0
 
 case "$1" in
 freeze)
-	if [ "$STARTASAP" -eq 1 ]; then
+	if [ "$IMMEDIATE" -eq 1 ]; then
 		SQL="SELECT pg_start_backup('${LABEL}', true);"
 	else
 		SQL="SELECT pg_start_backup('${LABEL}');"
