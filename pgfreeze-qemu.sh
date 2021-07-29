@@ -17,12 +17,12 @@ freeze)
 		SQL="SELECT pg_start_backup('${LABEL}');"
 	fi
 	
-	su -c "echo \"$SQL\" | psql" - ${PGUSER} > /dev/null
+	su -c "echo \"$SQL\" | psql" - ${PGUSER} >/dev/null 2>&1
 	logger --tag ${SELFNAME}  "Postgres RDBMS has been freezed for backup"
 	;;
 thaw)
 	SQL="SELECT * FROM pg_stop_backup();"
-	su -c "echo \"$SQL\" | psql" - ${PGUSER} > /dev/null
+	su -c "echo \"$SQL\" | psql" - ${PGUSER} >/dev/null 2>&1
 	logger --tag ${SELFNAME} "Postgress has been unfrezed"
         ;;
 *)
