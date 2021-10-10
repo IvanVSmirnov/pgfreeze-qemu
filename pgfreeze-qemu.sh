@@ -1,5 +1,5 @@
 #!/bin/sh
-SELFNAME="pgfreeze-qemu"
+SELFNAME=`basename $0`
 
 # Default values
 PGUSER="postgres"
