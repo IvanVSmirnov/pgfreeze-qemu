@@ -20,7 +20,7 @@ How to install
 
 .. code:: bash
 
-	$ cp pgfreeze-qemu.sh /etc/qemu/fsfreeze-hook/
+	$ cp pgfreeze-qemu.sh /etc/qemu/fsfreeze-hook.d/
 
 
 2. Copy config file to /etc/default/
