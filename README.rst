@@ -16,7 +16,7 @@ pgfreeze-qemu requires:
 How to install
 ===========================================================================================
 
-1. Copy script pgfreeze-qemu.sh to qemu guest agent fsfreeze-hook directory. By default, it should be /etc/qemu/fsfreeze-hook/. See 'man qemu-ga'
+1. Copy script pgfreeze-qemu.sh to qemu guest agent fsfreeze-hook directory. By default, it should be /etc/qemu/fsfreeze-hook.d/. See 'man qemu-ga'
 
 .. code:: bash
 
