@@ -23,7 +23,7 @@ freeze)
 thaw)
 	SQL="SELECT * FROM pg_stop_backup();"
 	su -c "echo \"$SQL\" | psql" - ${PGUSER} >/dev/null 2>&1
-	logger --tag ${SELFNAME} "Postgress has been unfrezed"
+	logger --tag ${SELFNAME} "Postgres has been unfrezed"
         ;;
 *)
 	echo "Usage: ./pgfreeze.sh (freeze|thaw)"
