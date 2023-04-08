@@ -5,5 +5,11 @@ PGUSER="postgres"
 # String you want to use to uniquely identify this backup operation
 LABEL="pgfreeze"
 
-# By default, Postgres can take a long time to start backup. This is because it performs a checkpoint, and the I/O required for the checkpoint will be spread out over a significant period of time, by default half your inter-checkpoint interval (see the configuration parameter checkpoint_completion_target). This is usually what you want, because it minimizes the impact on query processing. If you want to start the backup as soon as possible, set IMMEDIATE parameter to 1. Default value: 0.
+# By default, Postgres can take a long time to start backup. This is because it
+# performs a checkpoint, and the I/O required for the checkpoint will be spread
+# out over a significant period of time, by default half your inter-checkpoint 
+# interval (see the configuration parameter checkpoint_completion_target). This
+#  is usually what you want, because it minimizes the impact on query processing.
+# If you want to start the backup as soon as possible, set IMMEDIATE parameter to
+# 1. Default value: 0.
 IMMEDIATE=1

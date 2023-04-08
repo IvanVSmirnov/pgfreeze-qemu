@@ -13,6 +13,14 @@ pgfreeze-qemu requires:
 * qemu-guest-agent in VM with Postgres RDBMS
 
 
+Compatibility
+-------------------------------------------------------------------------------------------
+Tested with:
+* Postgres 14, 15
+* Proxmox 6, 7 (KVM)
+* VM with Debian 9, 10, 11
+
+
 How to install
 ===========================================================================================
 
